@@ -10,13 +10,14 @@ endfunction
   
 task run();
 repeat(20) begin
-@(sr.cb);
+@(sr.mon_cb);
 trans=new();
 trans.w_en=sr.w_en;
 trans.r_en=sr.r_en;
 trans.address=sr.address;
 trans.w_data=sr.w_data;
 trans.r_data=sr.r_data;
+$display("__________________________________________________________________________________________________________");
 $display("====================MONITOR SIGNALS==================");
 $display("TIME=%0t W_EN=%0d r_EN=%0d ADDRESS=%0d w_DATA=%0d R_DATA=%0d",$time,trans.w_en,trans.r_en,trans.address,trans.w_data,trans.r_data);
 mon_to_sco.put(trans);
