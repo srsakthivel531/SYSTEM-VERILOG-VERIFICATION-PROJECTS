@@ -2,6 +2,7 @@ class scoreboard;
 transaction trans;
 mailbox #(transaction) mon_to_sco;
 bit [7:0]ref_mem[15:0];
+  
 function new(mailbox #(transaction) mon_to_sco);
 this.mon_to_sco=mon_to_sco;
 endfunction 
