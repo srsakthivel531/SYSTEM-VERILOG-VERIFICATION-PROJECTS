@@ -10,7 +10,7 @@ this.sr=sr;
 endfunction
   
 task run();
-repeat(20) begin
+  repeat(220) begin
 @(sr.mon_cb);
 trans=new();
 trans.w_en=sr.w_en;
