@@ -8,7 +8,7 @@ this.gen_to_dri=gen_to_dri;
 endfunction
   
 task run();
-repeat(20) begin
+repeat(220) begin
 trans=new();
 trans.randomize();
 gen_to_dri.put(trans);
