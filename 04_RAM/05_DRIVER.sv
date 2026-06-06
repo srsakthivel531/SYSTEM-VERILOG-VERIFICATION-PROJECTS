@@ -9,7 +9,7 @@ this.sr=sr;
 endfunction
   
 task run();
-repeat(20) begin
+  repeat(220) begin
 @(sr.dri_cb);
 gen_to_dri.get(trans);
 sr.dri_cb.w_en<=trans.w_en;
