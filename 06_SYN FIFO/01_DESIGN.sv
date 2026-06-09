@@ -78,9 +78,8 @@ integer i;
     else if(full)
     begin
         data_out <= mem[rd_ptr[2:0]];
-        mem[wr_ptr[2:0]]<=data_in;
         rd_ptr<=rd_ptr+1;
-        wr_ptr<=wr_ptr+1;
+       count<=count-1;
     end
 
     else
